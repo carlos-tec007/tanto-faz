@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If...ELSEIF....ELSE</title>
+</head>
+<body>
+    <h3>Decisão Condicional com IF encadeado com IFELSE</h3>
+    <script>
+        /* Uso de instrução cindicional com IF....ELSEIF....ELSE...
+        A declaração condicional com IFELSE foi construida para evitar o aninhamento de IFs sucessivos
+
+        Referencias:
+        https://www.w3schools.com/js/js_if_else.asp
+
+         ============= Missão 45 minutos.
+         Sigma5- Cáculo de salário líquido
+        
+          Objetivo: 
+          Calcular o salário de um funcionário que trabalha por hora (horista)
+          informação do cálculo:
+          a) Quantidade de horas (js_ght)      
+          b) Valor da hora de trabalho (js_vht)
+          c) Percentual de desconto do INSS (js_inss)
+          d) Indicar uma classificação salarial.
+
+          Métodos: 
+          Entrada de dados: Windows.prompt
+          Saída de dados: Document.write
+        
+         */ 
+
+         var  js_ght //Horas trabalhadas
+         var  js_vht // Valor da hora de trabalho
+         var  js_inss // Valor do inss
+         var js_tdes;  // total de descontos
+         var js_sb; // salário bruto
+         var js_sl; // salário liquído
+
+         js_ght = parseInt(window.prompt("digite a quantidade de horas trabalhadas (135 A 180)","00"));
+         js_vht = parseInt(window.prompt("digite o valor da hora de trabalho (25 A 50) ","00"));
+         js_inss = parseInt(window.prompt("digite o desconto do inss: (5 a 15)","00"));
+
+         js_sb = js_ght * js_vht;
+         js_tdes = (js_inss/100) * js_sb;
+         js_sl = js_sb - js_tdes;
+         js_desconto = js_sb * js_inss;
+
+         document.write("Calculo do salário liquido");
+        
+         document.write("quantidade de horas trabalhadas (135 a 180)" + js_ght + "<br>");
+         if(js_ght >=180);
+        document.write("Quantidade de horas trabalhadas exercidas");
+        if(js_ght<=135);
+        document.write("Quantidade de horas trabalhadas insuficiente");
+    
+        document.write("Quantidade do valor da hora de trabalho (25 a 50)" + js_vht + "<br>");
+
+        if(js_vht>=50)
+        document.write("Valor de hora de trabalho exercida");
+        if(js_vht<=25)
+        document.write("Valor de hora de trabalho não exercida");
+          
+        
+        document.write("Disconto do Inss");
+
+        document.write("valor do disconto (5 a 15)" +js_tdes  + "<br>");
+        if(js_tdes >=15)
+        document.write("Percentual de desconto Alto");
+        if(js_tdes <=5)
+        document.write("Percentual de desconto baixo");
+        
+         document.write("Calculadora de Salário" + "<br>")
+         document.write("--------------------------------- <br>")
+         document.write("Valor do Salário" + js_sl + "<br>")
+         document.write("---------------------------------------")
+
+         
+         
+        if(js_sl <1500){
+            document.write("Seu salário é baixo");
+        }else if(js_sl >= 1600 && js_sl <= 2500){
+            document.write("Seu salário é ok");
+        }else if(js_sl > 2500 && js_sl <= 3000){
+            document.write("Seu salário é ótimo");
+        }else if (js_sl > 3000 && js_sl<= 6000)
+            document.write("Seu salário é monstruoso")
+            
+        
+        
+        
+        
+
+        
+
+
+
+         
+         
+    </script>
+</body>
+</html>
